@@ -3,29 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Darkviento 2024</title>
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700&family=Source+Sans+Pro&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
-    <title>Darkviento 2024</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
+
   <body>
+    <!-- Nieve -->
     <div id="snow-container"></div>
 
+    <!-- Header -->
     <header>
       <h1 class="title">Darkviento 2024</h1>
       <h2 class="subtitle">para Cami</h2>
     </header>
 
-    <div class="advent-calendar">
+    <!-- Calendario de Adviento -->
+    <div class="advent-calendar nes-container">
       <div class="day line-L points-1" data-day="1" data-action="modal">
         <div class="line-top-right horizontal"></div>
         <div class="line-top-right vertical"></div>
@@ -250,7 +249,7 @@
         src="./assets/img/Phili.png"
         alt="Philippa"
       />
-      <div class="philippa__message"></div>
+      <div class="philippa__message nes-balloon from-right is-dark"></div>
     </div>
 
     <!-- Modales personalizados -->

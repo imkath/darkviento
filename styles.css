@@ -22,12 +22,12 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  margin: 0 2rem;
+  margin: 2rem 2rem 0;
 }
 
 .title {
-  font-family: "Bodoni Moda", serif;
-  font-size: 2.5rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
   color: #f0f0f0;
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
@@ -344,39 +344,16 @@ header {
 }
 
 .philippa__message {
+  display: none;
   position: absolute;
-  top: -50px;
-  left: 15%;
-  transform: translateX(-50%);
-  background: #000;
-  color: #fff;
-  border: 2px solid #fff;
+  top: -70px;
+  right: 0;
+  box-shadow: none;
+  width: 165px;
   font-family: "Press Start 2P", cursive;
   font-size: 10px;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 5px 10px;
   text-align: center;
-  display: none;
-  z-index: 10;
-  white-space: nowrap;
-  box-shadow: 4px 4px 0px #000;
-}
-
-/* Colita del globo */
-.philippa__message::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 80%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border: 2px solid #fff;
-  border-top: none;
-  border-right: none;
-  transform: translateX(-50%) rotate(315deg);
-  box-shadow: 2px 2px 0px #000;
 }
 
 /* Modal */
@@ -440,6 +417,10 @@ header {
 }
 
 @media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
   .advent-calendar {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -453,15 +434,6 @@ header {
   .philippa__image {
     width: 120px;
     height: auto;
-  }
-
-  .philippa__message {
-    top: -60px;
-    left: 50%;
-  }
-
-  .philippa__message::after {
-    left: 50%;
   }
 }
 

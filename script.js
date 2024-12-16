@@ -87,7 +87,7 @@ window.addEventListener("click", (e) => {
 });
 
 // Philippa
-// Mensajes aleatorios
+// Mensajes de Philippa
 const messages = [
   "Miau miau",
   "Quiero churu",
@@ -103,24 +103,24 @@ const messages = [
 const philippaImage = document.getElementById("philippa-image");
 const messageBubble = document.querySelector(".philippa__message");
 
-// Función para mostrar un mensaje aleatorio
+// Función para mostrar mensaje aleatorio
 function showRandomMessage() {
-  // Seleccionar mensaje aleatorio
+  // Seleccionar un mensaje aleatorio
   const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
-  // Configurar mensaje en el globo
+  // Configurar el contenido del globo
   messageBubble.textContent = randomMessage;
 
   // Mostrar el globo
   messageBubble.style.display = "block";
 
-  // Ocultar el globo después de 3 segundos
+  // Ocultar después de 4 segundos
   setTimeout(() => {
     messageBubble.style.display = "none";
   }, 4000);
 }
 
-// Función para reproducir GIF en mobile
+// Función para reproducir el GIF de Philippa
 function playGif() {
   const originalSrc = "./assets/img/Phili.png";
   const gifSrc = "./assets/img/Phili.gif";
@@ -131,14 +131,11 @@ function playGif() {
   // Volver a la imagen original después de 2.5 segundos
   setTimeout(() => {
     philippaImage.src = originalSrc;
-  }, 2500); // Duración del gif en ms
+  }, 2500);
 }
 
-// Event listener para clic en la imagen
+// Evento de click en Philippa (desktop y mobile)
 philippaImage.addEventListener("click", () => {
-  // Mostrar mensaje
-  showRandomMessage();
-
-  // Reproducir GIF en mobile o desktop
-  playGif();
+  showRandomMessage(); // Mostrar mensaje aleatorio
+  playGif(); // Reproducir gif
 });
