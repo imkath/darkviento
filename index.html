@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700&family=Source+Sans+Pro&display=swap"
       rel="stylesheet"
@@ -13,6 +18,8 @@
     <title>Darkviento 2024</title>
   </head>
   <body>
+    <div id="snow-container"></div>
+
     <header>
       <h1 class="title">Darkviento 2024</h1>
       <h2 class="subtitle">para Cami</h2>
@@ -235,12 +242,24 @@
       </div>
     </div>
 
+    <!-- Philippa -->
+    <div class="philippa">
+      <img
+        id="philippa-image"
+        class="philippa__image"
+        src="./assets/img/Phili.png"
+        alt="Philippa"
+      />
+      <div class="philippa__message"></div>
+    </div>
+
     <!-- Modales personalizados -->
     <div class="modal" id="modal-day-1">
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>
-          Un espacio para que te escriba una carta de amor personalizada. ✍️❤️
+          Hoy comienza este el calendario de adviento y por eso... aquí va este
+          vale por un trozo de pie de limón ♡
         </p>
       </div>
     </div>

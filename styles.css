@@ -9,6 +9,16 @@ body {
   align-items: center;
 }
 
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Detrás del contenido */
+  pointer-events: none; /* No bloquea clics */
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -40,110 +50,101 @@ header {
   width: 90vw;
   max-width: 1000px;
   padding: 2rem;
-  border: 1px solid #333;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   position: relative;
-  background: radial-gradient(circle at center, #1b1b1b 0%, #0f0f0f 100%);
+  background: radial-gradient(
+    circle at center,
+    rgba(27, 27, 27, 0.5) 0%,
+    rgba(15, 15, 15, 0.5) 100%
+  );
   align-items: start;
-}
-
-@media (min-width: 768px) {
-  .advent-calendar {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .advent-calendar {
-    grid-template-columns: repeat(6, 1fr);
-  }
 }
 
 .day {
   position: relative;
-  background: linear-gradient(to bottom, #2b2b2b, #1f1f1f);
-  border: 1px solid #333;
+  background: #212121; /* Un tono oscuro uniforme */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombras para efecto de relieve */
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   overflow: hidden;
   padding: 0.5rem;
 }
 
-/* Alturas para un patrón orgánico */
+/* Alturas variables más verticales */
 .day:nth-of-type(1) {
-  height: 150px;
+  height: 180px;
 }
 .day:nth-of-type(2) {
-  height: 160px;
+  height: 190px;
 }
 .day:nth-of-type(3) {
-  height: 145px;
+  height: 175px;
 }
 .day:nth-of-type(4) {
-  height: 155px;
+  height: 185px;
 }
 .day:nth-of-type(5) {
-  height: 150px;
+  height: 180px;
 }
 .day:nth-of-type(6) {
-  height: 165px;
+  height: 200px;
 }
 .day:nth-of-type(7) {
-  height: 158px;
+  height: 190px;
 }
 .day:nth-of-type(8) {
-  height: 150px;
+  height: 180px;
 }
 .day:nth-of-type(9) {
-  height: 170px;
+  height: 210px;
 }
 .day:nth-of-type(10) {
-  height: 145px;
+  height: 175px;
 }
 .day:nth-of-type(11) {
-  height: 160px;
+  height: 190px;
 }
 .day:nth-of-type(12) {
-  height: 155px;
+  height: 185px;
 }
 .day:nth-of-type(13) {
-  height: 148px;
+  height: 178px;
 }
 .day:nth-of-type(14) {
-  height: 165px;
+  height: 200px;
 }
 .day:nth-of-type(15) {
-  height: 140px;
+  height: 170px;
 }
 .day:nth-of-type(16) {
-  height: 162px;
+  height: 195px;
 }
 .day:nth-of-type(17) {
-  height: 150px;
+  height: 180px;
 }
 .day:nth-of-type(18) {
-  height: 153px;
+  height: 183px;
 }
 .day:nth-of-type(19) {
-  height: 155px;
+  height: 185px;
 }
 .day:nth-of-type(20) {
-  height: 150px;
+  height: 180px;
 }
 .day:nth-of-type(21) {
-  height: 160px;
+  height: 190px;
 }
 .day:nth-of-type(22) {
-  height: 145px;
+  height: 175px;
 }
 .day:nth-of-type(23) {
-  height: 165px;
+  height: 200px;
 }
 .day:nth-of-type(24) {
-  height: 155px;
+  height: 185px;
 }
 
 .number {
@@ -163,11 +164,11 @@ header {
   transform: translateX(-50%);
   display: flex;
   gap: 5px;
-  z-index: 2; /* Asegura que los puntos estén sobre otros elementos */
+  z-index: 2;
 }
 
 .points div {
-  width: 4px; /* Aumenta el tamaño para mejor visibilidad */
+  width: 4px;
   height: 4px;
   background: #aaa;
   border-radius: 50%;
@@ -225,23 +226,23 @@ header {
 
 /* Línea horizontal superior derecha */
 .line-L .line-top-right.horizontal {
-  width: 20px; /* Ajusta según el tamaño deseado */
+  width: 20px;
   height: 2px;
   top: 10%;
-  right: 10%; /* Empieza desde el borde derecho */
+  right: 10%;
 }
 
 /* Línea vertical superior derecha */
 .line-L .line-top-right.vertical {
   width: 2px;
-  height: 20px; /* Ajusta según el tamaño deseado */
-  top: 10%; /* Comienza desde el borde superior */
+  height: 20px;
+  top: 10%;
   right: 10%;
 }
 
 /* Línea horizontal inferior izquierda */
 .line-L .line-bottom-left.horizontal {
-  width: 20px; /* Ajusta según el tamaño deseado */
+  width: 20px;
   height: 2px;
   bottom: 10%;
   left: 10%;
@@ -250,16 +251,17 @@ header {
 /* Línea vertical inferior izquierda */
 .line-L .line-bottom-left.vertical {
   width: 2px;
-  height: 20px; /* Ajusta según el tamaño deseado */
+  height: 20px;
   bottom: 10%;
   left: 10%;
 }
 
 /* Hover */
 .day:not(.disabled):hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  background: linear-gradient(to bottom, #323232, #242424);
+  transform: translateY(-8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.4);
+  background: #353535;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 /* Días deshabilitados */
@@ -267,9 +269,11 @@ header {
   opacity: 0.3;
   cursor: not-allowed;
 }
+
 .day.disabled:hover {
   transform: none;
-  box-shadow: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background: #121212;
 }
 
 /* Animación shake */
@@ -325,6 +329,56 @@ header {
   animation: suspenseReveal 2.5s ease;
 }
 
+/* Philippa */
+.philippa {
+  position: fixed;
+  right: 1rem;
+  bottom: 5%;
+}
+
+.philippa__image {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px #8c8b8b1a);
+  transition: opacity 0.3s ease;
+}
+
+.philippa__message {
+  position: absolute;
+  top: -50px;
+  left: 15%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+  z-index: 10;
+  white-space: nowrap;
+  box-shadow: 4px 4px 0px #000;
+}
+
+/* Colita del globo */
+.philippa__message::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 80%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  transform: translateX(-50%) rotate(315deg);
+  box-shadow: 2px 2px 0px #000;
+}
+
 /* Modal */
 .modal {
   display: none;
@@ -376,4 +430,43 @@ header {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* Solo aplica el hover en dispositivos con soporte */
+  .philippa__image:hover {
+    content: url("./assets/img/Phili.gif");
+  }
+}
+
+@media (min-width: 768px) {
+  .advent-calendar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Philippa */
+  .philippa {
+    position: fixed;
+    right: 2rem;
+  }
+
+  .philippa__image {
+    width: 120px;
+    height: auto;
+  }
+
+  .philippa__message {
+    top: -60px;
+    left: 50%;
+  }
+
+  .philippa__message::after {
+    left: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .advent-calendar {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }

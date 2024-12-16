@@ -1,3 +1,7 @@
+particlesJS.load("snow-container", "particles-snow.json", function () {
+  console.log("Particles.js cargado con nieve");
+});
+
 // Determinar el día actual (si es diciembre)
 const today = new Date();
 const currentMonth = today.getMonth(); // 0=Enero, 11=Diciembre
@@ -80,4 +84,61 @@ window.addEventListener("click", (e) => {
     currentModal.classList.remove("show");
     currentModal = null;
   }
+});
+
+// Philippa
+// Mensajes aleatorios
+const messages = [
+  "Miau miau",
+  "Quiero churu",
+  "Hola mamá",
+  "Te amo",
+  "Dame comida",
+  "Soy una reina",
+  "¿Qué miras?",
+  "Más cariños",
+];
+
+// Elementos de Philippa
+const philippaImage = document.getElementById("philippa-image");
+const messageBubble = document.querySelector(".philippa__message");
+
+// Función para mostrar un mensaje aleatorio
+function showRandomMessage() {
+  // Seleccionar mensaje aleatorio
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  // Configurar mensaje en el globo
+  messageBubble.textContent = randomMessage;
+
+  // Mostrar el globo
+  messageBubble.style.display = "block";
+
+  // Ocultar el globo después de 3 segundos
+  setTimeout(() => {
+    messageBubble.style.display = "none";
+  }, 4000);
+}
+
+// Función para reproducir GIF en mobile
+function playGif() {
+  const originalSrc = "./assets/img/Phili.png";
+  const gifSrc = "./assets/img/Phili.gif";
+
+  // Cambiar a gif
+  philippaImage.src = gifSrc;
+
+  // Volver a la imagen original después de 2.5 segundos
+  setTimeout(() => {
+    philippaImage.src = originalSrc;
+  }, 2500); // Duración del gif en ms
+}
+
+// Event listener para clic en la imagen
+philippaImage.addEventListener("click", () => {
+  // Mostrar mensaje
+  showRandomMessage();
+
+  // Reproducir GIF en mobile o desktop
+  playGif();
 });
