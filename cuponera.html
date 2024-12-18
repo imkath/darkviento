@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuponera Darkviento</title>
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Título -->
+    <header>
+      <h1 class="title">Cuponera Darkviento</h1>
+      <p class="subtitle">Tus premios y vales especiales</p>
+    </header>
+
+    <!-- Cuponera -->
+    <div class="cuponera">
+      <!-- Ejemplo de vale disponible -->
+      <div class="coupon available">
+        <h2 class="coupon-title">Vale por un helado NotCo 🍦</h2>
+        <p class="coupon-description">
+          Canjea este cupón por un delicioso helado NotCo.
+        </p>
+        <div class="coupon-info">
+          <span class="status">Estado: <b>Disponible</b></span>
+          <span class="uses">Usos restantes: <b>1</b></span>
+          <span class="expiry">Válido hasta: <b>31/12/2024</b></span>
+        </div>
+      </div>
+
+      <!-- Ejemplo de vale usado -->
+      <div class="coupon used">
+        <h2 class="coupon-title">Vale por una tarde de sudokus 🧩</h2>
+        <p class="coupon-description">
+          Disfruta una tarde de resolver sudokus juntas.
+        </p>
+        <div class="coupon-info">
+          <span class="status">Estado: <b>Usado</b></span>
+          <span class="uses">Usos restantes: <b>0</b></span>
+          <span class="expiry">Válido hasta: <b>31/12/2024</b></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
