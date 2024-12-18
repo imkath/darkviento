@@ -21,16 +21,12 @@ function executeAction(dayElem, dayNumber) {
 
   if (!actionType || actionType === "modal") {
     // Abrir modal
+    // Abrir modal
     openModal(dayNumber);
-  } else if (actionType === "link") {
-    // Abrir link en la misma pestaña
-    if (url) {
-      window.location.href = url;
-    }
-  } else if (actionType === "newpage") {
+  } else if (actionType === "link" || actionType === "newpage") {
     // Abrir link en nueva pestaña
     if (url) {
-      window.open(url, "_blank");
+      window.open(url, "_blank"); // Siempre abre en una nueva pestaña
     }
   }
 }
