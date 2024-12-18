@@ -446,6 +446,20 @@ header {
   color: #ff5e5e;
 }
 
+footer {
+  padding: 2rem 1rem 1rem;
+}
+
+footer a {
+  color: white;
+  transition: all 300ms linear;
+}
+
+footer a:hover {
+  color: rgb(154, 154, 154);
+  text-decoration: none;
+}
+
 @media (hover: hover) and (pointer: fine) {
   /* Solo aplica el hover en dispositivos con soporte */
   .philippa__image:hover {
