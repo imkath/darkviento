@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cuponera Darkviento</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
@@ -13,44 +14,412 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cuponera.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Título -->
+    <!-- Nieve -->
+    <div id="snow-container"></div>
+
+    <!-- Header -->
     <header>
       <h1 class="title">Cuponera Darkviento</h1>
-      <p class="subtitle">Tus premios y vales especiales</p>
+      <p class="subtitle">Premios y vales especiales</p>
     </header>
 
-    <!-- Cuponera -->
     <div class="cuponera">
-      <!-- Ejemplo de vale disponible -->
-      <div class="coupon available">
-        <h2 class="coupon-title">Vale por un helado NotCo 🍦</h2>
+      <!-- Día 1 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Vale por un trozo de pie de limón 🥧</p>
         <p class="coupon-description">
-          Canjea este cupón por un delicioso helado NotCo.
+          Canjea este cupón por un delicioso trozo de pie de limón.
         </p>
         <div class="coupon-info">
-          <span class="status">Estado: <b>Disponible</b></span>
-          <span class="uses">Usos restantes: <b>1</b></span>
-          <span class="expiry">Válido hasta: <b>31/12/2024</b></span>
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
         </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="pie-limon"
+        >
+          Usar cupón
+        </button>
       </div>
 
-      <!-- Ejemplo de vale usado -->
-      <div class="coupon used">
-        <h2 class="coupon-title">Vale por una tarde de sudokus 🧩</h2>
+      <!-- Día 2 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Cariños ilimitados 🥰</p>
         <p class="coupon-description">
-          Disfruta una tarde de resolver sudokus juntas.
+          Un ticket para abrazos y cariños sin límite.
         </p>
         <div class="coupon-info">
-          <span class="status">Estado: <b>Usado</b></span>
-          <span class="uses">Usos restantes: <b>0</b></span>
-          <span class="expiry">Válido hasta: <b>31/12/2024</b></span>
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 3</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="carinos-ilimitados"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 4 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Elige tu comida favorita 🍽️</p>
+        <p class="coupon-description">Yo la preparo para ti, mi amor.</p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 3</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="comida-favorita"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 5 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Tarde de Camilo 🎶</p>
+        <p class="coupon-description">
+          Escuchar música de Camilo y que me enseñes tus favoritas.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="tarde-camilo"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 6 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Masaje relajante 💆‍♀️</p>
+        <p class="coupon-description">
+          Un masaje para relajarte cuando lo necesites.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 2</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="masaje-relajante"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 7 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Helado NotCo 🍦</p>
+        <p class="coupon-description">
+          Canjea este cupón por un helado NotCo a tu elección.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="helado-notco"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 8 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Película que tú elijas 🎥</p>
+        <p class="coupon-description">
+          Escoge la película que quieras y la veremos juntas.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 3</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="pelicula-eliges"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 9 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Serie que tú elijas 📺</p>
+        <p class="coupon-description">
+          Tú eliges la próxima serie que veremos juntas.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="serie-eliges"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 10 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Vale por un día de hacer lo que más te gusta 🎮🛋️</p>
+        <p class="coupon-description">
+          Puedes jugar, descansar, ver The Office, lo que quieras.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="dia-10"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 11 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Comida Uber Eats 🍔🍱</p>
+        <p class="coupon-description">
+          Canjea por una comida en Uber Eats, tú eliges.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 2</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="comida-ubereats"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 12 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Te invito al cine 🎥🍿</p>
+        <p class="coupon-description">
+          Tú eliges la película, iremos juntas al cine.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="invito-cine"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 13 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Vale por un día de hacer lo que tú quieras 🌟</p>
+        <p class="coupon-description">
+          Escoge cualquier actividad, yo me adapto a lo que desees.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="dia-lo-que-quieras"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 14 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Desayuno a la cama 🥞☕</p>
+        <p class="coupon-description">
+          Vale por un desayuno especial servido a la cama.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="desayuno-cama"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 15 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Día de descanso 🌷</p>
+        <p class="coupon-description">
+          Tú no haces nada, yo me encargo de todo.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 3</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="dia-descanso"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 17 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Sesión de nanais 🛌✨</p>
+        <p class="coupon-description">
+          Vale por una sesión completa de nanais y cariños.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 3</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="sesion-nanais"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 18 (Faltante) -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Ticket para una sorpresa 🎁</p>
+        <p class="coupon-description">
+          Ticket para una sorpresa. (Se hace válida luego de 5 a 7 días)
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="ticket-sorpresa"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 19 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Caminata juntas 🌳</p>
+        <p class="coupon-description">
+          Vale por una caminata al aire libre juntas.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 3</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="caminata-juntas"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 20 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Noche de película 🍿✨</p>
+        <p class="coupon-description">
+          Noche de películas con snacks incluidos.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="noche-pelicula"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 21 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Tarde de sudokus 🧩</p>
+        <p class="coupon-description">
+          Una tarde para resolver sudokus juntas. (Disponible después de unos
+          días).
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="tarde-sudokus"
+        >
+          Usar cupón
+        </button>
+      </div>
+
+      <!-- Día 23 -->
+      <div class="nes-container with-title is-dark coupon available">
+        <p class="title">Un dibujo especial 🎨🐾</p>
+        <p class="coupon-description">
+          Un dibujo especial de nosotras junto a Philippa.
+        </p>
+        <div class="coupon-info">
+          <p class="coupon-state">Estado: Disponible</p>
+          <p class="coupon-uses">Usos: 1</p>
+          <p class="coupon-expiration">Vencimiento: 31/12/2025</p>
+        </div>
+        <button
+          class="nes-btn is-warning use-coupon-btn"
+          data-coupon-id="dibujo-especial"
+        >
+          Usar cupón
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div class="modal" id="confirm-modal">
+      <div class="modal-content nes-container is-dark">
+        <p id="confirm-text">¿Deseas usar este cupón?</p>
+        <div class="modal-buttons">
+          <button class="nes-btn is-success" id="confirm-yes">Sí</button>
+          <button class="nes-btn is-error" id="confirm-no">No</button>
         </div>
       </div>
     </div>
 
     <script src="script.js"></script>
+    <script src="cuponera.js"></script>
   </body>
 </html>

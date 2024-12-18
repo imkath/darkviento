@@ -8,7 +8,7 @@ const currentMonth = today.getMonth(); // 0=Enero, 11=Diciembre
 const currentRealDay = currentMonth === 11 ? today.getDate() : 0;
 
 // Para pruebas:
-// const currentRealDay = 10;
+//const currentRealDay = 24;
 
 const days = document.querySelectorAll(".day");
 const modals = document.querySelectorAll(".modal");
@@ -20,7 +20,6 @@ function executeAction(dayElem, dayNumber) {
   const url = dayElem.getAttribute("data-url");
 
   if (!actionType || actionType === "modal") {
-    // Abrir modal
     // Abrir modal
     openModal(dayNumber);
   } else if (actionType === "link" || actionType === "newpage") {
