@@ -3,10 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Darkviento 2024</title>
     <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -25,6 +30,7 @@
 
     <!-- Calendario de Adviento -->
     <div class="advent-calendar nes-container">
+      <!-- Día 1 -->
       <div class="day line-L points-1" data-day="1" data-action="modal">
         <div class="line-top-right horizontal"></div>
         <div class="line-top-right vertical"></div>
@@ -33,33 +39,26 @@
         <div class="points p1"><div></div></div>
         <span class="number">1</span>
       </div>
-      <div
-        class="day points-2"
-        data-day="2"
-        data-action="link"
-        data-url="https://example.com"
-      >
+      <!-- Día 2 -->
+      <div class="day points-2" data-day="2" data-action="modal">
         <div class="points p2">
           <div></div>
           <div></div>
         </div>
         <span class="number">2</span>
       </div>
+      <!-- Día 3 -->
       <div
         class="day lines-horizontal points-1"
         data-day="3"
-        data-action="newpage"
-        data-url="https://google.com"
+        data-action="link"
+        data-url="/cosas-que-amo-de-ti"
       >
         <div class="points p1"><div></div></div>
         <span class="number">3</span>
       </div>
-      <div
-        class="day points-3"
-        data-day="4"
-        data-action="newpage"
-        data-url="https://example.org"
-      >
+      <!-- Día 4 -->
+      <div class="day points-3" data-day="4" data-action="modal">
         <div class="points p3">
           <div></div>
           <div></div>
@@ -67,23 +66,20 @@
         </div>
         <span class="number">4</span>
       </div>
+      <!-- Día 5 -->
       <div class="day border-inside points-1" data-day="5" data-action="modal">
         <div class="points p1"><div></div></div>
         <span class="number">5</span>
       </div>
-      <div
-        class="day points-2"
-        data-day="6"
-        data-action="newpage"
-        data-url="https://duckduckgo.com"
-      >
+      <!-- Día 6 -->
+      <div class="day points-2" data-day="6" data-action="modal">
         <div class="points p2">
           <div></div>
           <div></div>
         </div>
         <span class="number">6</span>
       </div>
-
+      <!-- Día 7 -->
       <div class="day points-3" data-day="7" data-action="modal">
         <div class="points p3">
           <div></div>
@@ -92,22 +88,20 @@
         </div>
         <span class="number">7</span>
       </div>
+      <!-- Día 8 -->
       <div class="day border-inside points-1" data-day="8" data-action="modal">
         <div class="points p1"><div></div></div>
         <span class="number">8</span>
       </div>
-      <div
-        class="day points-2"
-        data-day="9"
-        data-action="link"
-        data-url="https://twitter.com"
-      >
+      <!-- Día 9 -->
+      <div class="day points-2" data-day="9" data-action="modal">
         <div class="points p2">
           <div></div>
           <div></div>
         </div>
         <span class="number">9</span>
       </div>
+      <!-- Día 10 -->
       <div class="day line-L points-1" data-day="10" data-action="modal">
         <div class="line-top-right horizontal"></div>
         <div class="line-top-right vertical"></div>
@@ -116,12 +110,8 @@
         <div class="points p1"><div></div></div>
         <span class="number">10</span>
       </div>
-      <div
-        class="day points-3"
-        data-day="11"
-        data-action="newpage"
-        data-url="https://medium.com"
-      >
+      <!-- Día 11 -->
+      <div class="day points-3" data-day="11" data-action="modal">
         <div class="points p3">
           <div></div>
           <div></div>
@@ -129,6 +119,7 @@
         </div>
         <span class="number">11</span>
       </div>
+      <!-- Día 12 -->
       <div
         class="day lines-horizontal points-1"
         data-day="12"
@@ -137,7 +128,7 @@
         <div class="points p1"><div></div></div>
         <span class="number">12</span>
       </div>
-
+      <!-- Día 13 -->
       <div class="day line-L points-1" data-day="13" data-action="modal">
         <div class="line-top-right horizontal"></div>
         <div class="line-top-right vertical"></div>
@@ -146,12 +137,8 @@
         <div class="points p1"><div></div></div>
         <span class="number">13</span>
       </div>
-      <div
-        class="day points-3"
-        data-day="14"
-        data-action="newpage"
-        data-url="https://reddit.com"
-      >
+      <!-- Día 14 -->
+      <div class="day points-3" data-day="14" data-action="modal">
         <div class="points p3">
           <div></div>
           <div></div>
@@ -159,6 +146,7 @@
         </div>
         <span class="number">14</span>
       </div>
+      <!-- Día 15 -->
       <div
         class="day lines-horizontal points-1"
         data-day="15"
@@ -167,22 +155,20 @@
         <div class="points p1"><div></div></div>
         <span class="number">15</span>
       </div>
-      <div
-        class="day points-2"
-        data-day="16"
-        data-action="link"
-        data-url="https://example.com/page16"
-      >
+      <!-- Día 16 -->
+      <div class="day points-2" data-day="16" data-action="modal">
         <div class="points p2">
           <div></div>
           <div></div>
         </div>
         <span class="number">16</span>
       </div>
+      <!-- Día 17 -->
       <div class="day border-inside points-1" data-day="17" data-action="modal">
         <div class="points p1"><div></div></div>
         <span class="number">17</span>
       </div>
+      <!-- Día 18 -->
       <div class="day points-3" data-day="18" data-action="modal">
         <div class="points p3">
           <div></div>
@@ -191,7 +177,7 @@
         </div>
         <span class="number">18</span>
       </div>
-
+      <!-- Día 19 -->
       <div class="day points-2" data-day="19" data-action="modal">
         <div class="points p2">
           <div></div>
@@ -199,16 +185,13 @@
         </div>
         <span class="number">19</span>
       </div>
+      <!-- Día 20 -->
       <div class="day border-inside points-1" data-day="20" data-action="modal">
         <div class="points p1"><div></div></div>
         <span class="number">20</span>
       </div>
-      <div
-        class="day points-3"
-        data-day="21"
-        data-action="newpage"
-        data-url="https://example.com/21"
-      >
+      <!-- Día 21 -->
+      <div class="day points-3" data-day="21" data-action="modal">
         <div class="points p3">
           <div></div>
           <div></div>
@@ -216,6 +199,7 @@
         </div>
         <span class="number">21</span>
       </div>
+      <!-- Día 22 -->
       <div class="day line-L points-1" data-day="22" data-action="modal">
         <div class="line-top-right horizontal"></div>
         <div class="line-top-right vertical"></div>
@@ -224,6 +208,7 @@
         <div class="points p1"><div></div></div>
         <span class="number">22</span>
       </div>
+      <!-- Día 23 -->
       <div class="day points-2" data-day="23" data-action="modal">
         <div class="points p2">
           <div></div>
@@ -231,10 +216,12 @@
         </div>
         <span class="number">23</span>
       </div>
+      <!-- Día 24 -->
       <div
         class="day lines-horizontal points-1"
         data-day="24"
-        data-action="modal"
+        data-action="link"
+        data-url="/fin-del-calendario"
       >
         <div class="points p1"><div></div></div>
         <span class="number">24</span>
@@ -256,77 +243,151 @@
     <div class="modal" id="modal-day-1">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>
-          Hoy comienza este el calendario de adviento y por eso... aquí va este
-          vale por un trozo de pie de limón ♡
-        </p>
+        <p>Hoy comienza el calendario: vale por un trozo de pie de limón. 🥧</p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-2">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Aqui tienes un ticket para canjear cariños ilimitados. 🥰</p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-4">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Elige tu comida favorita y yo te la preparo mi amor. 🍽️</p>
       </div>
     </div>
     <div class="modal" id="modal-day-5">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Ticket para canjear por cariños ilimitados. 🥰</p>
+        <p>
+          Tarde de escuchar música de Camilo y que me enseñes tus canciones
+          favoritas. 🎶
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-6">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Cuando quieras te doy un masaje relajante. 💆‍♀️</p>
       </div>
     </div>
     <div class="modal" id="modal-day-7">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Vale por una tarde de rascarte la espalda. 🛌✨</p>
+        <p>Vale por un helado NotCo. 🍦</p>
       </div>
     </div>
     <div class="modal" id="modal-day-8">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Lista de todas las cosas que amo de ti. ❤️</p>
+        <p>Puedes elegir la película que quieras y la veremos. 🎥</p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-9">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Tu elijes la siguiente serie que comenzaremos a ver 📺</p>
       </div>
     </div>
     <div class="modal" id="modal-day-10">
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>
-          Puedes elegir cuando quieras tu comida favorita y yo te la preparo. 🍽️
+          Vale por un día de hacer lo que más te gusta (juegar, descansar, ver
+          the office etc.). 🎮🛋️
         </p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-11">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Vale por una comida Uber Eats. 🍔🍣</p>
       </div>
     </div>
     <div class="modal" id="modal-day-12">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>
-          Vale por una tarde de aprender y escuchar música de Camilo juntas. 🎶
-        </p>
+        <p>Te invito al cine, tú eliges la película. 🎥🍿</p>
       </div>
     </div>
     <div class="modal" id="modal-day-13">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Ticket válido por un masaje relajante. 💆‍♀️</p>
+        <p>Vale por un día de hacer lo que tú quieras. 🌟</p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-14">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Vale por desayuno a la cama. 🥞☕</p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-15">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          Vale por un día de descanso: tú no haces nada, yo me encargo de todo.
+          🌷
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-16">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          Una ratita hermosa llego a mi vida hace un tiempo e hizo que cada día
+          valiera más la pena, que cada cosa fuese más bella, ahora nada es como
+          antes, mi corazón estalla de amor cada que la pienso, esa ratita eres
+          tú. Gracias por existir y mantener en mi vida amor.
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-17">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Vale por una sesión de nanais. 🛌✨</p>
       </div>
     </div>
     <div class="modal" id="modal-day-18">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>
-          Te amo infinito mi amor, espero tengas un día bello y estés
-          disfrutando tu calendario de adviento. 🌟
-        </p>
+        <p>Ticket para una sorpresa. 🎁 (se hace valida luego de 5 a 7 días)</p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-19">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Vale por una caminata juntas. 🌳</p>
       </div>
     </div>
     <div class="modal" id="modal-day-20">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Te invito al cine. Tú eliges la película. 🎥🍿</p>
+        <p>Noche de película con snacks incluidos. 🍿✨</p>
+      </div>
+    </div>
+    <div class="modal" id="modal-day-21">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          Vale por una tarde de sudokus. 🧩 (valido luego de unos días de
+          canjeado)
+        </p>
       </div>
     </div>
     <div class="modal" id="modal-day-22">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Vale por una comida que tú elijas en Uber Eats. 🍔🍣</p>
+        <p>Te amo mucho mi ratita bella, ¿cuando nos casamos?.</p>
+        // agregar imagen de anillo o gif de beyonce bailando
       </div>
     </div>
-    <div class="modal" id="modal-day-24">
+    <div class="modal" id="modal-day-23">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Feliz Navidad, mi amor. El mejor regalo para mi, eres tú. 🎄💖</p>
+        <p>Un dibujo especial de nosotras con Philippa🎨🐾</p>
       </div>
     </div>
 
