@@ -2,13 +2,16 @@ particlesJS.load("snow-container", "particles-snow.json", function () {
   console.log("Particles.js cargado con nieve");
 });
 
-// Determinar el día actual (si es diciembre)
+// Determinar el día actual y si estamos en diciembre de 2024
 const today = new Date();
 const currentMonth = today.getMonth(); // 0=Enero, 11=Diciembre
-const currentRealDay = currentMonth === 11 ? today.getDate() : 0;
+const currentYear = today.getFullYear(); // Año actual
 
-// Para pruebas:
-//const currentRealDay = 24;
+// Verificar si estamos en diciembre de 2024
+const isDecember2024 = currentMonth === 11 && currentYear === 2024;
+
+// Configurar el día actual permitido
+const currentRealDay = isDecember2024 ? today.getDate() : 24; // En diciembre 2024 sigue restringido, luego desbloquear todos
 
 const days = document.querySelectorAll(".day");
 const modals = document.querySelectorAll(".modal");
@@ -33,8 +36,9 @@ function executeAction(dayElem, dayNumber) {
 // Configurar qué días están disponibles
 days.forEach((day) => {
   const dayNumber = parseInt(day.dataset.day, 10);
-  if (dayNumber > currentRealDay) {
-    // Día futuro: deshabilitado
+
+  if (isDecember2024 && dayNumber > currentRealDay) {
+    // Solo en diciembre de 2024 deshabilitar días futuros
     day.classList.add("disabled");
   } else {
     // Día actual o pasado: habilitado
